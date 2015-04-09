@@ -1,0 +1,14 @@
+{
+  "name": "ex12",
+  "version": "1.0.0",
+  "description": "ex12",
+  "main": "program.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "otto",
+  "license": "MIT",
+  "dependencies": {
+    "through2-map": "^1.4.0"
+  }
+}
