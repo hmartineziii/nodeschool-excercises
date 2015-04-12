@@ -1,0 +1,1 @@
+#Package to solve all how-to-npm problems.
