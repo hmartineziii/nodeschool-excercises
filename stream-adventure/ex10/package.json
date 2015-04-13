@@ -1,0 +1,16 @@
+{
+  "name": "ex10",
+  "version": "1.0.0",
+  "description": "",
+  "main": "program.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "through": "^2.3.7",
+    "through2": "^0.6.5",
+    "trumpet": "^1.7.1"
+  }
+}
