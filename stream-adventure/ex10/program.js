@@ -1,15 +1,25 @@
 var trumpet = require('trumpet');
 var through = require('through2');
-var fs = require('fs');
 var tr = trumpet();
 
-tr.pipe(process.stdout);
-
-var ws = tr.select('.loud').createStream()
-
-ws.pipe(through(function (chunk,_,next){
+var loud = tr.select('.loud').createStream()
+loud.pipe(through(function (chunk,_,next){
 	this.push(chunk.toString().toUpperCase());
 	next()
-})).pipe(ws)
+})).pipe(loud)
 
-process.stdin.pipe(tr)
+process.stdin.pipe(tr).pipe(process.stdout)
+
+
+//SOLUTION
+// var trumpet = require('trumpet');
+// var through = require('through2');
+// var tr = trumpet();
+
+// var loud = tr.select('.loud').createStream();
+// loud.pipe(through(function (buf, _, next) {
+//   this.push(buf.toString().toUpperCase());
+//   next();
+// })).pipe(loud);
+
+// process.stdin.pipe(tr).pipe(process.stdout);
