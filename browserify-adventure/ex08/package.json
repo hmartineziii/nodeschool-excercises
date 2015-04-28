@@ -1,0 +1,19 @@
+{
+  "name": "ex08",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "quote-stream": "0.0.0",
+    "split": "^0.3.3",
+    "sprintf": "^0.1.5",
+    "stream-combiner2": "^1.0.2",
+    "through": "^2.3.7",
+    "through2": "^0.6.5"
+  }
+}
