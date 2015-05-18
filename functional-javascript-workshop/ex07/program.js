@@ -1,10 +1,8 @@
 function reduce(arr, fn, initial) {
-  // SOLUTION GOES HERE
-  if (!arr.length) return initial
-  var head = arr[0];
-  head = fn(arr[0]);
-  var tail = arr.slice(1);
-  return reduce(tail,fn,head))
+	var current = initial;
+	for (var i=0; i<arr.length; i++)
+		current = fn(current, arr[i]);
+	return current
 }
 
 module.exports = reduce
