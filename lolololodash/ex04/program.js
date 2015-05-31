@@ -1,12 +1,19 @@
 var _ = require("lodash");
 
+
+function checktemp(temps){
+	return temps > 19
+}
+
 var worker = function(collection) {
 	var result = {'hot':[],'warm': []};
-    return _.every(collection, function(town){
-    	return _.any(town, function(temp){
-    		return temp > 19 ? result['hot'].push(town) : result['warm'].push(town)
-    	})
-    })
+	_.forEach(collection, function(town, townname){
+		if (_.every(collection[townname], checktemp))
+			result['hot'].push(townname);
+		else if (_.any(collection[townname], checktemp))
+			result['warm'].push(townname)
+	})
+	return result
 }
 
 // export the worker function as a nodejs module
