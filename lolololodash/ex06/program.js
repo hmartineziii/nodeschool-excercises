@@ -1,15 +1,17 @@
 var _ = require("lodash");
     
 var worker = function(collection) {
+	var rArray=[];
     // do work; return stuff
-    var rObj = {};
     var byPerson = _.groupBy(collection, 'username');
-    console.log(byPerson);
     _.forEach(byPerson, function(n, key){
-    	console.log(n);
-    	rObj[key] = _.size(n);
+    	var rObj = {};
+    	rObj['username'] = key
+    	rObj['comment_count'] = _.size(n);
+    	rArray.push(rObj);
+    	idx+=1;
     })
-    return rObj
+    return _.sortBy(rArray,'comment_count').reverse()
 };
 
 // export the worker function as a nodejs module
