@@ -2,13 +2,11 @@ var _ = require("lodash");
     
 var worker = function(collection) {
     // do work; return stuff
-    _.reduce(collection, function(result, current, key, collection){
-    	console.log(result);
-    	if (_.find(result, {'article': current.article}))
-    		console.log(_.find(result, {'article': current.article}))
-    	else
-    		return result.push(current);
-    },[])
+    return _.reduce(collection, function(result, current){
+    	if (_.result(_.find(result, {"article": current.article})))
+    		
+    	return result
+    },[]);
 };
 
 // export the worker function as a nodejs module
