@@ -2,11 +2,13 @@ var _ = require("lodash");
     
 var worker = function(collection) {
     // do work; return stuff
-    return _.reduce(collection, function(result, current){
-    	if (_.result(_.find(result, {"article": current.article})))
-    		
-    	return result
-    },[]);
+    var orders = _.groupBy(collection, 'article');
+
+    var result = _.forEach(orders, function(item){
+    	return _.reduce(item,function(person){
+
+    	},{})
+    });
 };
 
 // export the worker function as a nodejs module
