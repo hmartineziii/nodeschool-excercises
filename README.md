@@ -1,7 +1,7 @@
 # nodeschool-excercises
 
 ##Modules Completed
-Functional Javascript, ExpressWorks, Make Me Hapi, Browserify Adventure, LololoDash, how-to-npm, learnyounode, learnyoumongo, stream-adventure
+Javascripting, git-it, functional Javascript, ExpressWorks, Make Me Hapi, Browserify Adventure, lololoDash, how-to-npm, learnyounode, learnyoumongo, stream-adventure
 
 ##Modules Left to do (in order of Priority)
 
