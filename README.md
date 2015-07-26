@@ -1,4 +1,5 @@
 # nodeschool-excercises
+[nodeschool.io](nodeschool.io)
 
 ##Modules Completed
 Javascripting, git-it, functional Javascript, ExpressWorks, Make Me Hapi, Browserify Adventure, lololoDash, how-to-npm, learnyounode, learnyoumongo, stream-adventure
